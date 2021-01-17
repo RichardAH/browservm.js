@@ -1,3 +1,15 @@
+# Disclaimer
+BrowserVM's emulation engine is based on QEMU.
+
+The following points clarify the QEMU licenses.
+QEMU as a whole is released under the GNU General Public License, version 2.
+Parts of QEMU have specific licenses which are compatible with the GNU General Public License, version 2. 
+Hence each source file contains its own licensing information.
+Source files with no licensing information are released under the GNU General Public License, version 2 or (at your option) any later version.
+As of July 2013, contributions under version 2 of the GNU General Public License (and no later version) are only accepted for the following files or directories: bsd-user/, linux-user/, hw/misc/vfio.c, hw/xen/xen_pt*.
+The Tiny Code Generator (TCG) is released under the BSD license (see license headers in files).
+QEMU is a trademark of Fabrice Bellard.
+
 # Browservm.js
 BrowserVM is an efficient X86-64 full-system emulator running in browsers. It emulates commonly-used hardware such as
 1. Console
@@ -5,7 +17,9 @@ BrowserVM is an efficient X86-64 full-system emulator running in browsers. It em
 3. Ethernet (Experimental)
 4. 3D Graphics (Not yet available)
 
-You can check our the demo page on.
+You can check our the demo page on https://elliott-wen.github.io/browservm.demo/
+
+Use python in your browser today!
 
 ## How fast is Browservm.js?
 Browservm **in the interpretation mode** is slow. A modern CPU has a single-core performance 300 times faster than Browservm.
