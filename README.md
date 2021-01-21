@@ -17,7 +17,7 @@ BrowserVM is an efficient X86-64 full-system emulator running in browsers. It em
 3. Ethernet (Experimental)
 4. 3D Graphics (Not yet available)
 
-You can check our the demo page on https://elliott-wen.github.io/browservm.demo/
+You can check our the demo page on https://elliott-wen.github.io/browservm.js/
 
 Use python in your browser today!
 
