@@ -13,8 +13,8 @@ QEMU is a trademark of Fabrice Bellard.
 # Browservm.js
 BrowserVM is an efficient X86-64 full-system emulator running in browsers. It emulates commonly-used hardware such as
 1. Console
-2. Hard disk (Experimental)
-3. Ethernet (Experimental)
+2. Hard disk (Experimental: Memory FS. We are building 9P FS now)
+3. Ethernet (Not yet available. Stub functions)
 4. 3D Graphics (Not yet available)
 
 You can check our the demo page on https://elliott-wen.github.io/browservm.js/
@@ -30,7 +30,7 @@ Our recent Dhrystone test shows that BrowserVM (internal experimental build) is 
 Still, JIT mode is highly experimental and not yet publicly available. But we enable JIT on our demo page so that you can play around with it. 
 JIT mode requires many experimental features of WebAssembly, especially tail-call optimization. 
 These features may not be available in your browser. In this case, BrowserVM will fall back to interpretation.
-To run a benchmark on Browservm, you can try the following command on our demo page.
+To run a benchmark on Browservm, you can try the following command on our demo page. Source not yet available, but we will release it asap. 
 ```
 time dhrystone 20000000
 ```
@@ -104,7 +104,9 @@ make menuconfig
 make
 cp output/images/rootfs.ext2 /path-to-browservm/rootfs.ext2
 ```
-**Todo to support a image larger than 8MB, you need to tweak the main.c file, maybe a help from you?. **
+**
+The MEMFS is quite messy, feel free to clean up the code and send me a pull request.
+Todo to support a image larger than 32MB, you need to tweak the main.c file, maybe a help from you?. **
 
 # Acknowledgement and License
 BrowserVM makes use of many codes from QEMU (https://www.qemu.org/) and TinyEMU (https://bellard.org/jslinux/).
